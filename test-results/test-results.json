@@ -1,0 +1,302 @@
+{
+  "config": {
+    "configFile": "/run/playwright.config.ts",
+    "rootDir": "/run/e2e/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/run/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "Desktop Chrome",
+        "name": "Desktop Chrome",
+        "testDir": "/run/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.43.0",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "log-in.e2e.test.ts",
+      "file": "log-in.e2e.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "LodGerin page",
+          "file": "log-in.e2e.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "LodGerin page contains the information correctly",
+              "ok": true,
+              "tags": [
+                "regression",
+                "functional"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Chrome",
+                  "projectName": "Desktop Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 3811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-04-26T21:41:27.746Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/run/test-results/log-in.e2e-LodGerin-page-L-85c38-s-the-information-correctly-Desktop-Chrome/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8516a68777dec5ef1b4a-df1b9f50dd1d435f2a75",
+              "file": "log-in.e2e.test.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "smoke/lodgerin-users-api/api-auth.spec.ts",
+      "file": "smoke/lodgerin-users-api/api-auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API smoke suite",
+          "file": "smoke/lodgerin-users-api/api-auth.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET - Check session token",
+              "ok": true,
+              "tags": [
+                "regression",
+                "api"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Chrome",
+                  "projectName": "Desktop Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 2354,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Test Login\n"
+                        },
+                        {
+                          "text": "json: {\"msg\":\"Login successfully!\",\"data\":{\"user\":{\"id\":\"0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8\",\"email\":\"admin@example.com\",\"name\":\"ADMINISTRATOR\",\"lastName\":\"ACCOUNT\",\"documentType\":\"id\",\"documentId\":\"25678550\",\"phoneNumber\":\"4148722897\",\"prefixPhone\":\"58\",\"genre\":\"male\",\"birthday\":\"2024-03-16\",\"ownerType\":null,\"photo\":\"https://lodgerin-develop.s3.gra.io.cloud.ovh.net/staging/users/0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8/profile/0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8-1713452227.jpg\",\"verifiedEmail\":true,\"status\":\"active\",\"lastSession\":\"2024-04-26T15:36:36.992Z\",\"Role\":{\"id\":1,\"title\":\"Admin\",\"type\":\"admin\"},\"Location\":{\"id\":\"f63d57c7-1821-4772-9801-b2289f305254\",\"address\":\"Paseo de Europa\",\"fullAddress\":\"Paseo de Europa, San Sebastián de los Reyes, Community of Madrid, 20108, Spain\",\"number\":\"12\",\"lat\":\"40.54180680093123\",\"lon\":\"-3.626756330594475\",\"extraInfo\":{\"road\":\"Paseo de Europa\",\"town\":\"San Sebastián de los Reyes\",\"state\":\"Community of Madrid\",\"ISO3166-2-lvl4\":\"ES-MD\",\"postcode\":\"20108\",\"country\":\"Spain\",\"country_code\":\"es\"},\"country\":\"Spain\",\"countryCode\":\"ES\",\"prefixPhone\":\"+34\",\"state\":\"Community of Madrid\",\"city\":\"San Sebastián de los Reyes\",\"postalCode\":\"20108\",\"osmType\":\"way\",\"osmPlaceId\":373391,\"osmId\":616211030,\"createdAt\":\"2024-03-12T09:50:54.405Z\",\"updatedAt\":\"2024-04-25T16:38:05.303Z\"},\"Settings\":{\"language\":\"en\"},\"createdAt\":\"2024-03-05T13:44:21.209Z\",\"updatedAt\":\"2024-04-25T16:38:05.299Z\"},\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBiNWU5OWU0LWU1ZjItNDRhMy1iOWU0LWMzOGU1MWUzODFkOCIsInJvbGUiOjEsInR5cGUiOiJhZG1pbiIsImlhdCI6MTcxNDE2NzY4OSwiZXhwIjoxNzQ1NzI1Mjg5fQ.NEMEniq1qoEwb6qwxcFeKCh9BHR-bTXkZPmO-jorJNk\"}}\n"
+                        },
+                        {
+                          "text": "Check session token\n"
+                        },
+                        {
+                          "text": "json: {\"msg\":\"Valid session token!\"}\n"
+                        },
+                        {
+                          "text": "Logout\n"
+                        },
+                        {
+                          "text": "json: {\"msg\":\"Logout successfully!\"}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-04-26T21:41:27.760Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "496bab608a93873d5b3a-c39ab25cd5480f867e86",
+              "file": "smoke/lodgerin-users-api/api-auth.spec.ts",
+              "line": 34,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "visual/log-in.visual.test.ts",
+      "file": "visual/log-in.visual.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "LodGerin page visual testing",
+          "file": "visual/log-in.visual.test.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "get started Forgot password link [ @functional ]",
+              "ok": true,
+              "tags": [
+                "regression",
+                "visual",
+                "functional"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Chrome",
+                  "projectName": "Desktop Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 4008,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-04-26T21:41:27.736Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/run/test-results/visual-log-in.visual-LodGe-e2e86-t-password-link-functional--Desktop-Chrome/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "293f1c75f4a08abcf4d3-e2bd35bb5ecaed5f7ebe",
+              "file": "visual/log-in.visual.test.ts",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "Verify the LodGerin page desing [ @visual ]",
+              "ok": true,
+              "tags": [
+                "regression",
+                "visual",
+                "visual"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Chrome",
+                  "projectName": "Desktop Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 3240,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-04-26T21:41:30.693Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/run/test-results/visual-log-in.visual-LodGe-06de6-odGerin-page-desing-visual--Desktop-Chrome/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "293f1c75f4a08abcf4d3-ca4b4051579b047286cd",
+              "file": "visual/log-in.visual.test.ts",
+              "line": 25,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-04-26T21:41:26.709Z",
+    "duration": 7521.420000000001,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
