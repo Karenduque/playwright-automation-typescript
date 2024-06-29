@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { LodGerinPage } from "../pages/logInPage";
+import { ProductoStorePage } from "../pages/logInPage";
 import { TAGS } from "../helpers/utils/tags";
 
 test.describe("LodGerin page", () => {
@@ -9,9 +9,9 @@ test.describe("LodGerin page", () => {
       tag: [TAGS.REGRESSION, TAGS.VISUAL],
     },
     async ({ page }) => {
-      const lodGerinPage = new LodGerinPage(page);
-      await lodGerinPage.goto();
-      await lodGerinPage.getStarted();
+      const ProductoStorePage = new ProductoStorePage(page);
+      await ProductoStorePage.goto();
+      await ProductoStorePage.getStarted();
     }
   );
 });

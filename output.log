@@ -1,22 +1,55 @@
 
-> test-runner@1.0.0 test:e2e:local
+> test-runner@1.22.22 test:e2e:local
 > npx playwright test
 
 
-Running 4 tests using 3 workers
+Running 1 test using 1 worker
 
-Test Login
-json: {"msg":"Login successfully!","data":{"user":{"id":"0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8","email":"admin@example.com","name":"ADMINISTRATOR","lastName":"ACCOUNT","documentType":"id","documentId":"25678550","phoneNumber":"4148722897","prefixPhone":"58","genre":"male","birthday":"2024-03-16","ownerType":null,"photo":"https://lodgerin-develop.s3.gra.io.cloud.ovh.net/staging/users/0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8/profile/0b5e99e4-e5f2-44a3-b9e4-c38e51e381d8-1713452227.jpg","verifiedEmail":true,"status":"active","lastSession":"2024-04-26T15:36:36.992Z","Role":{"id":1,"title":"Admin","type":"admin"},"Location":{"id":"f63d57c7-1821-4772-9801-b2289f305254","address":"Paseo de Europa","fullAddress":"Paseo de Europa, San Sebastián de los Reyes, Community of Madrid, 20108, Spain","number":"12","lat":"40.54180680093123","lon":"-3.626756330594475","extraInfo":{"road":"Paseo de Europa","town":"San Sebastián de los Reyes","state":"Community of Madrid","ISO3166-2-lvl4":"ES-MD","postcode":"20108","country":"Spain","country_code":"es"},"country":"Spain","countryCode":"ES","prefixPhone":"+34","state":"Community of Madrid","city":"San Sebastián de los Reyes","postalCode":"20108","osmType":"way","osmPlaceId":373391,"osmId":616211030,"createdAt":"2024-03-12T09:50:54.405Z","updatedAt":"2024-04-25T16:38:05.303Z"},"Settings":{"language":"en"},"createdAt":"2024-03-05T13:44:21.209Z","updatedAt":"2024-04-25T16:38:05.299Z"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBiNWU5OWU0LWU1ZjItNDRhMy1iOWU0LWMzOGU1MWUzODFkOCIsInJvbGUiOjEsInR5cGUiOiJhZG1pbiIsImlhdCI6MTcxNDE2NzY4OSwiZXhwIjoxNzQ1NzI1Mjg5fQ.NEMEniq1qoEwb6qwxcFeKCh9BHR-bTXkZPmO-jorJNk"}}
-Check session token
-json: {"msg":"Valid session token!"}
-Logout
-json: {"msg":"Logout successfully!"}
-  ✓  1 [Desktop Chrome] › smoke/lodgerin-users-api/api-auth.spec.ts:34:7 › API smoke suite › GET - Check session token (2.4s)
-  ✓  2 [Desktop Chrome] › log-in.e2e.test.ts:6:7 › LodGerin page › LodGerin page contains the information correctly (3.8s)
-  ✓  3 [Desktop Chrome] › visual/log-in.visual.test.ts:16:9 › LodGerin page visual testing › get started Forgot password link [ @functional ] (4.0s)
-  ✓  4 [Desktop Chrome] › visual/log-in.visual.test.ts:25:9 › LodGerin page visual testing › Verify the LodGerin page desing [ @visual ] (3.2s)
+  ✘  1 [Desktop Chrome] › login.test.ts:13:10 › LogIn ProductStore page visual testing › LogIn (30.4s)
 
-  4 passed (7.5s)
+
+  1) [Desktop Chrome] › login.test.ts:13:10 › LogIn ProductStore page visual testing › LogIn ───────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      [2m- waiting for locator('btn btn-primary')[22m
+
+
+       at ../pages/ProductStorePage.ts:40
+
+      38 |     await userInput.fill(user);
+      39 |     await passwordInput.fill(password);
+    > 40 |     await this.page.locator(this.locators.loginButton).click();
+         |                                                        ^
+      41 |     await this.page.pause();
+      42 |   }
+      43 |
+
+        at ProductoStorePage.login (/run/e2e/pages/ProductStorePage.ts:40:56)
+        at /run/e2e/tests/login.test.ts:17:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/login-LogIn-ProductStore-page-visual-testing-LogIn-Desktop-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/login-LogIn-ProductStore-page-visual-testing-LogIn-Desktop-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/login-LogIn-ProductStore-page-visual-testing-LogIn-Desktop-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/login-LogIn-ProductStore-page-visual-testing-LogIn-Desktop-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [Desktop Chrome] › login.test.ts (30.4s)
+  Consider splitting slow test files to speed up parallel execution
+  1 failed
+    [Desktop Chrome] › login.test.ts:13:10 › LogIn ProductStore page visual testing › LogIn ────────
 
 To open last HTML report run:
 

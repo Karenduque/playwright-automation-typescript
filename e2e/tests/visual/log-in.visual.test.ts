@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import { LodGerinPage } from "../../pages/logInPage";
+import { ProductoStorePage } from "../../pages/logInPage";
 import { TAGS } from "../../helpers/utils/tags";
 
 test.beforeEach(async ({ page }) => {
-  const lodGerinPage = new LodGerinPage(page);
-  await lodGerinPage.goto();
+  const ProductoStorePage = new ProductoStorePage(page);
+  await ProductoStorePage.goto();
 });
 
 test.describe(
@@ -23,8 +23,8 @@ test.describe(
     });
 
     test("Verify the LodGerin page desing [ @visual ]", async ({ page }) => {
-      const lodGerinPage = new LodGerinPage(page);
-      await lodGerinPage.verifyLogIn();
+      const ProductoStorePage = new ProductoStorePage(page);
+      await ProductoStorePage.verifyLogIn();
     });
   }
 );

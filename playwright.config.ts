@@ -32,7 +32,7 @@ export default defineConfig({
 
     screenshot: "only-on-failure",
 
-    video: "off",
+    video: "on",
 
     contextOptions: {
       ignoreHTTPSErrors: true,
